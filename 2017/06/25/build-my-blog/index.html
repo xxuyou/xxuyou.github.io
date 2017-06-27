@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Author Name,name@example.com"><title>使用 HEXO + Github 建立博客 · 荆秀网 实时数据推送</title><meta name="description" content="为了建立博客，无意中看到 hexo 好评很多，就找来别人的成功经验，自己搭建基于 Github 的博客了～
+以下是自己建立博客的过程。
+原料
+Github.com 的注册账号
+本地 node 环境
+本地 hexo 模块
+本地 Markdown 编辑器
+
+建立 Github 仓库登录（Github）建"><meta name="keywords" content="Hexo,HTML,CSS,android,Linux"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">荆秀网 实时数据推送</a></h3><div class="description"><p>Realtime Data Pusher WebSocket NodeJS Socket.IO</p></div><div class="sub_desc1"><p>实时数据推送服务 实时位置跟踪 股票数据推送</p></div><div class="sub_desc2"><p>体育数据推送 天气数据推送 聊天室</p></div></div></div><ul class="social-links"></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a href="https://www.caicai.me"> CaiCai </a><span>&</span><a href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/about">关于</a></li><li><a href="/archives">归档</a></li><li><a href="/links">友链</a></li></div><div class="information"><div class="back_btn"><li><a onclick="window.history.go(-1)" class="fa fa-chevron-left"> </a></li></div><div class="avatar"><img src="/images/favicon.png"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>使用 HEXO + Github 建立博客</a></h3></div><div class="post-content"><p>为了建立博客，无意中看到 <em>hexo</em> 好评很多，就找来别人的成功经验，自己搭建基于 Github 的博客了～</p>
+<p>以下是自己建立博客的过程。</p>
+<h3 id="原料"><a href="#原料" class="headerlink" title="原料"></a>原料</h3><ul>
+<li>Github.com 的注册账号</li>
+<li>本地 node 环境</li>
+<li>本地 hexo 模块</li>
+<li>本地 Markdown 编辑器</li>
+</ul>
+<h3 id="建立-Github-仓库"><a href="#建立-Github-仓库" class="headerlink" title="建立 Github 仓库"></a>建立 Github 仓库</h3><p>登录（<a href="https://github.com" target="_blank" rel="external">Github</a>）建立仓库（<strong>Repository</strong>），仓库命名使用 <strong>xxuyou.github.io</strong> 。</p>
+<p><a href="https://xxuyou.com"><img src="https://xxuyou.com/static/img/blog-000001.jpg" alt="荆秀网"></a></p>
+<ul>
+<li>标记1：仓库命名</li>
+<li>标记2：建立 Node 文件过滤器和指定协议</li>
+</ul>
+<p>仓库建立好了之后，离开 Github，接下来的步骤在本地笔记本上操作。</p>
+<blockquote>
+<p>至于仓库为啥一定要那样命名，我也不知道，这不是重点，总之先做出来再说。</p>
+</blockquote>
+<h3 id="全局安装-hexo-模块"><a href="#全局安装-hexo-模块" class="headerlink" title="全局安装 hexo 模块"></a>全局安装 hexo 模块</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo -g</div></pre></td></tr></table></figure>
+<p>噼里啪啦一通下载和安装之后，hexo 会安装到默认目录，并自动建立软连接，然后就可以在命令行里面直接用 <strong>hexo</strong> 来操作了。</p>
+<h3 id="初始化博客项目"><a href="#初始化博客项目" class="headerlink" title="初始化博客项目"></a>初始化博客项目</h3><p>在本地合适的目录内，运行：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 官网示例</span></div><div class="line">hexo init [folder]</div><div class="line"></div><div class="line"><span class="comment"># 我的脚本</span></div><div class="line">hexo init blog</div></pre></td></tr></table></figure>
+<p>这样会在当前目录下建立 <code>[folder]</code> 目录，并在其内部初始化代码结构。</p>
+<blockquote>
+<p>另外，手工建立 <code>blog</code>，进入 <code>blog</code> 后直接运行 <code>hexo init</code> 也可以初始化代码结构。</p>
+</blockquote>
+<p>然后，博客就建立好了。。。立好了。。。好了。。。了。。。</p>
+<h3 id="立即预览"><a href="#立即预览" class="headerlink" title="立即预览"></a>立即预览</h3><p>终端保持在 <code>blog</code> 目录根下，运行：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line"><span class="comment"># 或者</span></div><div class="line">hexo g</div></pre></td></tr></table></figure>
+<p>会自动生成全部静态文件到 <em>public</em> 目录，然后再运行：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure>
+<p>这样即可在本地建立一个简单的 WebServer 来预览博客了，访问地址是：<a href="http://127.0.0.1:4000" target="_blank" rel="external">http://127.0.0.1:4000</a> 。</p>
+<blockquote>
+<p>当 WebServer 运行中，需要停止的话，需要按 <code>Ctrl + C</code> 或者 <code>Control + C</code> 结束。</p>
+</blockquote>
+<h3 id="配置参数"><a href="#配置参数" class="headerlink" title="配置参数"></a>配置参数</h3><p><em>hexo</em> 参数配置是在根目录下的 <code>_config.yml</code> ，根据需要修改相应的值即可。</p>
+<p>详细的参考文档见：<a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">Docs</a></p>
+<h3 id="部署到-Github"><a href="#部署到-Github" class="headerlink" title="部署到 Github"></a>部署到 Github</h3><p>接下来在 <code>_config.yml</code> 的 <code>deploy</code> 块增加部署参数：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/xxuyou/xxuyou.github.io.git</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">master</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>我本地配置了 SSH 密钥，因此可以直接使用 <code>hexo deploy</code> 命令更新</p>
+</blockquote>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2017-06-25</span><i class="fa fa-tag"></i><a href="/categories/post/" title="post" class="tag">post </a><a href="/tags/blog/" title="blog" class="tag">blog </a><a href="/tags/hexo/" title="hexo" class="tag">hexo </a><a href="/tags/github/" title="github" class="tag">github </a></div></div></div></div><div class="share"><div class="evernote"><a href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank" class="fa fa-bookmark"></a></div><div class="weibo"><a href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));" class="fa fa-weibo"></a></div><div class="twitter"><a href="http://twitter.com/home?status=,https://xxuyou.com/2017/06/25/build-my-blog/,荆秀网 实时数据推送,使用 HEXO + Github 建立博客,;" class="fa fa-twitter"></a></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a role="navigation" href="/2017/06/21/client-side-dev/" title="客户端接入 | 荆秀数据推送" class="btn">下一篇</a></li></ul></div></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>
