@@ -2,7 +2,7 @@
 其实很早就发现这个问题了，客户端监听的事件会多次收到响应，具体表现为：
 
 第 1 次断线重连后，收到每条数据都会触发 2 次 callback
-第 2 次断线...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2017-07-02</span><i class="fa fa-tag"></i><a href="/categories/bug/" title="bug" class="tag">bug </a><a href="/tags/Socket-IO/" title="Socket.IO" class="tag">Socket.IO </a><a href="/tags/xxuyou/" title="xxuyou" class="tag">xxuyou </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2017/06/25/build-my-blog/">使用 HEXO + Github 建立博客</a></h3></div><div class="post-content"><p>为了建立博客，无意中看到 hexo 好评很多，就找来别人的成功经验，自己搭建基于 Github 的博客了～
+第 2 次断线...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2017-07-02</span><i class="fa fa-tag"></i><a href="/categories/bug/" title="bug" class="tag">bug </a><a href="/tags/xxuyou/" title="xxuyou" class="tag">xxuyou </a><a href="/tags/Socket-IO/" title="Socket.IO" class="tag">Socket.IO </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2017/06/25/build-my-blog/">使用 HEXO + Github 建立博客</a></h3></div><div class="post-content"><p>为了建立博客，无意中看到 hexo 好评很多，就找来别人的成功经验，自己搭建基于 Github 的博客了～
 以下是自己建立博客的过程。
 原料
 Github.com 的注册账号
@@ -16,7 +16,7 @@ Github.com 的注册账号
 服务端：生成身份鉴权令牌（JWT Token）放置在客户端 HTML Javascript 代码中备用
 客户端：连接 WSS 服务器，递交令牌申明合法身份建立对应用的事件监听
 
-服务端：生成身份鉴权令牌WSS 服务是一个公开在广域互联网上的实时数据推送...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2017-06-21</span><i class="fa fa-tag"></i><a href="/categories/doc/" title="doc" class="tag">doc </a><a href="/tags/api/" title="api" class="tag">api </a><a href="/tags/websocket/" title="websocket" class="tag">websocket </a><a href="/tags/Socket-IO/" title="Socket.IO" class="tag">Socket.IO </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2017/06/21/server-side-dev/">服务端接入 | 荆秀数据推送</a></h3></div><div class="post-content"><p>联系我们
+服务端：生成身份鉴权令牌WSS 服务是一个公开在广域互联网上的实时数据推送...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2017-06-21</span><i class="fa fa-tag"></i><a href="/categories/doc/" title="doc" class="tag">doc </a><a href="/tags/Socket-IO/" title="Socket.IO" class="tag">Socket.IO </a><a href="/tags/api/" title="api" class="tag">api </a><a href="/tags/websocket/" title="websocket" class="tag">websocket </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2017/06/21/server-side-dev/">服务端接入 | 荆秀数据推送</a></h3></div><div class="post-content"><p>联系我们
 服务端接入 RESTful API接入方可根据自己所用的开发语言，使用符合语义的指令来操作资源。
 请求包和响应包均为 JSON 格式。
 
@@ -33,4 +33,4 @@ WSS 是 荆秀实时数据推送服务 的英文简称。
 
 WSS 提供一个位于广域互联网的数据转发服务，服务方式是接收到发布者的数据请求后，依据预先设立的应用划定广播边界，在边界内对应用的全部订阅者进行数据副本的群发服务。
 
-WSS...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2017-06-21</span><i class="fa fa-tag"></i><a href="/categories/post/" title="post" class="tag">post </a><a href="/tags/websocket/" title="websocket" class="tag">websocket </a><a href="/tags/xxuyou/" title="xxuyou" class="tag">xxuyou </a></div></div></div></div><div class="pagination"><ul class="clearfix"></ul></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>
+WSS...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2017-06-21</span><i class="fa fa-tag"></i><a href="/categories/post/" title="post" class="tag">post </a><a href="/tags/xxuyou/" title="xxuyou" class="tag">xxuyou </a><a href="/tags/websocket/" title="websocket" class="tag">websocket </a></div></div></div></div><div class="pagination"><ul class="clearfix"></ul></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>
